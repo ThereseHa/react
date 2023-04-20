@@ -1,0 +1,54 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgb(0, 0, 0);
+  }
+  .container-fluid{
+    width:100%;
+  }
+
+  .navbar-brand {
+    margin-right: 20px;
+    font-size: 3rem;
+    color:aliceblue;
+  }
+
+  .navbar-nav {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding-top: 1rem;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size:1.5rem;
+
+  }
+
+  .form-control {
+    width: 200px;
+  }
+
+  .form-inline {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    .form-control {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
