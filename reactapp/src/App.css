@@ -52,10 +52,14 @@
     background-color: #005b84;
   }
 /*Game list refresh button styling*/
-.refresh-btn {
+.game-list-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    margin: 1rem;
+  }
+
+.refresh-btn {
     --text-base: 277deg, 55%, 40%;
     --text-hover: 307deg, 72%, 86%;
     --shadow-start: 52deg, 100%, 72%;
@@ -77,6 +81,7 @@
     cursor: pointer;
     position: relative;
     transition: 0.25s ease-out;
+
   }
   .refresh-btn::before, .refresh-btn::after {
     content: "";

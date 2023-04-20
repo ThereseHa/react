@@ -59,9 +59,9 @@ function GameList() {
     }
 
     return (
-        <div>
+        <div className="game-list-container">
             <button className="refresh-btn" onClick={handleRefresh}>
-                Refresh
+                Randomize games
             </button>
             <div className="game-list">
                 {games.map((game) => (
