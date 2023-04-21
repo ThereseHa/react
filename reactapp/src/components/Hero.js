@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import './Hero.css'
 import heroImage from '../assets/images/pexels-lucie-liz-3165335(1).jpg'
 
@@ -13,7 +12,6 @@ function Hero() {
                     We got you covered. We will randomize free games waiting for
                     you to play!
                 </p>
-                <button>Show me to the games!</button>
             </div>
         </div>
     )

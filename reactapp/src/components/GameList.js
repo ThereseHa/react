@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import '../App.css'
+import './GameList.css'
 
 function GameList() {
     const [games, setGames] = useState([])
@@ -15,14 +16,14 @@ function GameList() {
                 'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
             },
             params: {
-                'page-size': 50 // the API only supports page sizes up to 50
+                'page-size': 20 // the API only supports page sizes up to 20
             }
         }
 
         try {
             const response = await axios.request(options)
             const shuffledGames = shuffle(response.data)
-            const randomGames = shuffledGames.slice(0, 12) // get the first 12 games from the shuffled list
+            const randomGames = shuffledGames.slice(0, 12) // used slice method toget the first 12 games from the shuffled list
             setGames(randomGames)
         } catch (error) {
             console.log(error)
@@ -33,7 +34,7 @@ function GameList() {
         fetchGames()
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
-
+    // Above comment needed to fix eslint error
     const handleRefresh = () => {
         fetchGames()
     }
@@ -69,7 +70,9 @@ function GameList() {
                         <img src={game.thumbnail} alt={game.title} />
                         <h3>{game.title}</h3>
                         <p>{game.short_description}</p>
-                        <a href={game.game_url}>Play now</a>
+                        <a className="play-btn" href={game.game_url}>
+                            Play now
+                        </a>
                     </div>
                 ))}
             </div>
